@@ -151,10 +151,10 @@
 		let theNumber // Declaration of the variable theNumber
 		let theNumber = something // The equal sign initialize the variable to something
 		prompt("Pick a number") : // The prompt function shows a little dialog box asking for
-								  // user input with the string "Pick a number" above the inputarea.
-								  // The user input is taken in as string ex: "2"
+					  // user input with the string "Pick a number" above the inputarea.
+					  // The user input is taken in as string ex: "2"
 		Number(prompt("Pick a number")) // The function Number converts a value to a Number
-										// Ex : "2" is converted into 2 
+						// Ex : "2" is converted into 2 
 
 		Number.isNaN(arg) // is a function that returns true if the argument is Not a Number or false if it is legit number.
 		// The exclamation point(!) means 'not true' 
@@ -212,7 +212,7 @@
 
 	let yourName;
 	do {
-		yourName = prompt("Who are you?");
+	    yourName = prompt("Who are you?");
 	} while (!yourName);
 	console.log(yourName);
 
@@ -256,7 +256,7 @@
   	
 		let line = "#"; 
 
-			//Inside the for loop he is declairing a variable named line and initilizing it to the string "#".
+			// Inside the for loop he is declairing a variable named line and initilizing it to the string "#".
 		
 		line.length < 8;
 
@@ -269,12 +269,12 @@
 
 		line += "#" : 
 
-			//This part is where the incrementation happens, most people are familiar with numerical incrementation as :
+			// This part is where the incrementation happens, most people are familiar with numerical incrementation as :
 				for (i = 0; i<10; i = i + 1)  
 					console.log(i);
 			//	output : 0
-			//			 1
-			//			 2 and so on... 
+			//		 1
+			//		 2 and so on... 
 			
 			// But here it is a concatanation(+) because line is not a number but a string value
 
@@ -297,7 +297,7 @@
 					 for numbers divisible by only one of those).                                    */
 
 
-	//Author's Solution :
+	// Author's Solution :
 
 		for (let n = 1; n <= 100; n++) {
 	  		let output = "";
@@ -333,8 +333,8 @@
 
 	/*
 		PROBLEMATIC : Write a program that creates a string that represents an 8×8 grid, using newline
-					  characters to separate lines. At each position of the grid there is either a space
-					  or a "#" character. The characters should form a chessboard.
+			      characters to separate lines. At each position of the grid there is either a space
+			      or a "#" character. The characters should form a chessboard.
 	*/
 	
 	/*  Output expected:
