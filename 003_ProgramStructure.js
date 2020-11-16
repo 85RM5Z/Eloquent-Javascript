@@ -143,7 +143,7 @@
 		let theNumber = Number(prompt("Pick a number"));
 
 		if (!Number.isNaN(theNumber)) {
-			console.log("Your number is the square root of " + theNumber * theNumber);
+		    console.log("Your number is the square root of " + theNumber * theNumber);
 		}
 
 // Explanation of the above code:
@@ -170,11 +170,11 @@
 */
 		let num = Number(prompt("Pick a number"));
 		if (num < 10) {
-			console.log("Small");
+		    console.log("Small");
 		} else if (num < 100) {
-			console.log("Medium");
+		    console.log("Medium");
 		} else {
-			console.log("Large");
+		    console.log("Large");
 		}
 /*
 	The program will first check whether num is less than 10. If it is, it chooses
@@ -193,8 +193,8 @@
 
 	let number = 0;
 	while (number <= 12) {
-		console.log(number);
-		number = number + 2;
+	    console.log(number);
+	    number = number + 2;
 	}
 	// → 0
 	// → 2
@@ -249,7 +249,7 @@
 	//Author's Solution : 
 
 	for(let line = "#"; line.length < 8; line += "#")
-  		console.log(line);
+  	    console.log(line);
 
   	// Explanation of the above code :
 
@@ -271,7 +271,7 @@
 
 			// This part is where the incrementation happens, most people are familiar with numerical incrementation as :
 				for (i = 0; i<10; i = i + 1)  
-					console.log(i);
+				    console.log(i);
 			//	output : 0
 			//		 1
 			//		 2 and so on... 
@@ -300,10 +300,10 @@
 	// Author's Solution :
 
 		for (let n = 1; n <= 100; n++) {
-	  		let output = "";
-	  		if (n % 3 == 0) output += "Fizz";
-	  		if (n % 5 == 0) output += "Buzz";
-	  		console.log(output || n);
+	  	    let output = "";
+	  	    if (n % 3 == 0) output += "Fizz";
+	  	    if (n % 5 == 0) output += "Buzz";
+	  	    console.log(output || n);
 		}
 
 
@@ -311,20 +311,20 @@
 
 	  	for (let n = 1; n <= 100; n++)
 
-	  		// The for loop declares a variable n and initializes it's value to 1, and loops from 1 to 100(included).
+	  	    // The for loop declares a variable n and initializes it's value to 1, and loops from 1 to 100(included).
 	  		 
-	  		let output = "";
-	  		// Creates a variable named output which is an empty string.
-	  		if (n % 3 == 0) output += "Fizz";
-	  		// if n is divisible by 3 the output variable's empty string will be replaced by "Fizz"
-	  		// so if this condition is true output will nolonger be empty it will contain the string value "Fizz"
-	  		if (n % 5 == 0) output += "Buzz";
-	  		// if n is divisible by 5 the output variable's empty string will be replaced by "Buzz"
-	  		console.log(output || n);
-	  		// This console.log is clever because it saves us from writing another if condition
+	  	    let output = "";
+	  	    // Creates a variable named output which is an empty string.
+	  	    if (n % 3 == 0) output += "Fizz";
+	  	    // if n is divisible by 3 the output variable's empty string will be replaced by "Fizz"
+	  	    // so if this condition is true output will nolonger be empty it will contain the string value "Fizz"
+	  	    if (n % 5 == 0) output += "Buzz";
+	            // if n is divisible by 5 the output variable's empty string will be replaced by "Buzz"
+	  	    console.log(output || n);
+	  	    // This console.log is clever because it saves us from writing another if condition
 	  		
-			// What this console.log does is that it prints the output only if the output string isn't empty 
-			// or(||) else it return the value of n (which means n wasn't divisible by 3 nor 5)	
+		    // What this console.log does is that it prints the output only if the output string isn't empty 
+		    // or(||) else it return the value of n (which means n wasn't divisible by 3 nor 5)	
 	  		 
 
 	/*****************************************************************************************************/
@@ -356,14 +356,14 @@
 		let board = ""; 
 
 		for (let y = 0; y < size; y++) {
-	  		for (let x = 0; x < size; x++) {
+	  	    for (let x = 0; x < size; x++) {
 	    		if ((x + y) % 2 == 0) {
-	      			board += " ";
+	      		    board += " ";
 	    		} else {
-	      			board += "#";
+	      		    board += "#";
 	    		}
-	  		}
-	  		board += "\n";
+	  	    }
+	  	    board += "\n";
 		}
 
 		console.log(board);
@@ -375,19 +375,19 @@
 		let board = ""; // this is the empty string we're going to add either ' ' , '#' or newline
 
 		for (let y = 0; y < size; y++){ // in the outer loop we add newline to seperate rows
-	  		for (let x = 0; x < size; x++){ // every inner loop rappresents a line, and alternatively it's adding either ' ' or '#' to the string that's being populated
-	  		// the "for loop of x" must complete it's entire run from 0 to 8 before the "for loop of y" can start it's next loop, where y++
-	  			if ((x + y) % 2 == 0) {
-      				board += " ";
+	  	    for (let x = 0; x < size; x++){ // every inner loop rappresents a line, and alternatively it's adding either ' ' or '#' to the string that's being populated
+	  	    // the "for loop of x" must complete it's entire run from 0 to 8 before the "for loop of y" can start it's next loop, where y++
+	  		if ((x + y) % 2 == 0) {
+      			    board += " ";
     				// when we set x + y, every second number will be divisible by 2, therefore, 
     				// every second character will execute the " " space character, 
     				// and each new line will alternate between an even/odd number
     			}
     			else {
-      				board += "#";
+      			    board += "#"; // for every other number not divisible by 2, "#" will be executed 
     			}
-    			// for every other number not divisible by 2, "#" will be executed 
-  			}
+  		    }
+		    board += "\n";
   		}
 
 
