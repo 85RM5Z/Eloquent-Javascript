@@ -82,7 +82,7 @@
   			return counted;
 		}
 
-	/* PROBLEMATIC 2 :  write a function called countChar that behaves like countBs , except
+	/* PROBLEMATIC 2 :  Write a function called countChar that behaves like countBs , except
 			    		it takes a second argument that indicates the character that is to be counted
 			    		(rather than counting only uppercase “B” characters). Rewrite countBs to
 			    		make use of this new function.		*/
