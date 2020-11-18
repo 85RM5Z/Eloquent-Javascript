@@ -54,7 +54,7 @@
 										   // what return isEven(-n) does is that it recalls the isEven function with a transformed n value
 										   // Simply put the negative value is transformed into a positive value 
 										   // Exemple : n = -1
-										   //			isEven(-n) -> isEven(--1) = isEven(+1)
+										   // isEven(-n) -> isEven(--1) = isEven(+1)
 										   // Now the isEven fuction is called with +1 intead of -1 and it will return false becase it verifies the condition (n==1) 
 		else return isEven(n - 2);
 
@@ -140,7 +140,7 @@
   				return countChar(string, "B");
 			}
 
-			// The countChar() function allowed us to simplifiy the countBs() function, which earlier serverd only
-			// one purpose to count "B"s in a given string. Where countChar is more generic. 
+			// The countChar() function allowed us to simplifiy the countBs() function, which earlier serverd only one purpose to count "B"s in a given string. 
+			// Where countChar is more generic. 
 
 			
