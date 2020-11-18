@@ -23,9 +23,9 @@
 	// Recursion
 
 	/* PROBLEMATIC : Define a recursive function isEven corresponding to this description. The
-			 		 function should accept a single parameter (a positive, whole number) and return
-			 		 a Boolean.
-			 		 Test it on 50 and 75. See how it behaves on -1. 	*/
+									 function should accept a single parameter (a positive, whole number) and return
+			 		 				 a Boolean.
+			 		 				 Test it on 50 and 75. See how it behaves on -1. 	*/
 
 	// Author's Solution :
 
@@ -46,16 +46,16 @@
 	// Explanation of the above code :
 
 	function isEven(n) // defines a function named isEven which take n as it's argument, 
-			   		   // and when isEven is called later on it expects a number value i.e isEven(50)
+			   		   			 // and when isEven is called later on it expects a number value i.e isEven(50)
 
 		if (n == 0) return true; // if the value passed as the arg is equal to zero return the boolean value : true.
 		else if (n == 1) return false; // else if the arg is equal to one return the boolean value : false.
 		else if (n < 0) return isEven(-n); // else if the arg is equal to a negative value return isEven(-n)
-						   				   // what return isEven(-n) does is that it recalls the isEven function with a transformed n value
-						   				   // Simply put the negative value is transformed into a positive value 
-						   				   // Exemple : n = -1
-						   				   // isEven(-n) -> isEven(--1) = isEven(+1)
-						   				   // Now the isEven fuction is called with +1 intead of -1 and it will return false becase it verifies the condition (n==1) 
+						   				   							 // what return isEven(-n) does is that it recalls the isEven function with a transformed n value
+						   				   							 // Simply put the negative value is transformed into a positive value 
+						   				   							 // Exemple : n = -1
+						   				   							 // isEven(-n) -> isEven(--1) = isEven(+1)
+						   				   							 // Now the isEven fuction is called with +1 intead of -1 and it will return false becase it verifies the condition (n==1) 
 		else return isEven(n - 2);
 
 			// Imagine if the n value is greater than 1 it wouldn't enter any of our conditions,
@@ -67,8 +67,8 @@
 	// Bean counting
 
 	/* PROBLEMATIC 1 : Write a function countBs that takes a string as its only argument and returns
-			   		   a number that indicates how many uppercase “B” characters there are in the
-			   		   string. */
+			   		   			 a number that indicates how many uppercase “B” characters there are in the
+			   		   			 string. */
 	
 	// Author's Solution : 
 
@@ -83,9 +83,9 @@
 		}
 
 	/* PROBLEMATIC 2 :  Write a function called countChar that behaves like countBs , except
-			    		it takes a second argument that indicates the character that is to be counted
-			    		(rather than counting only uppercase “B” characters). Rewrite countBs to
-			    		make use of this new function.		*/
+			    						it takes a second argument that indicates the character that is to be counted
+			    						(rather than counting only uppercase “B” characters). Rewrite countBs to
+			    						make use of this new function.		*/
 
 
 	// Author's Solution :
