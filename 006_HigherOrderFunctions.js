@@ -2,9 +2,9 @@
 
 	// Flattening 
 
-	/* PROBLEMATIC : Use the reduce method in combination with the concat method to “flatten”
-					an array of arrays into a single array that has all the elements of the original
-					arrays.		*/
+	/* PROBLEMATIC :Use the reduce method in combination with the concat method to “flatten”
+			an array of arrays into a single array that has all the elements of the original
+			arrays.		*/
 
 
 	// Author's Solution :
@@ -21,7 +21,7 @@
 
 			// Take the array named arrays and reduce it with an accumulator named flat,
 			// with a starting/initial value of empty array [] and for each value in arrays
-			// cocantenate/add that value into the empty arry.
+			// cocantenate/add that value into the empty array.
 
 		console.log(arrays.reduce((flat, current) => flat.concat(current), []));
 
@@ -50,19 +50,19 @@
 	// Your own loop
 		
 		/* PROBLEMATIC :Write a higher-order function loop that provides something like a for loop
-						statement. It takes a value, a test function, an update function, and a body
-						function. Each iteration, it first runs the test function on the current loop value
-						and stops if that returns false. Then it calls the body function, giving it the
-						current value. Finally, it calls the update function to create a new value and
-						starts from the beginning.
-						When defining the function, you can use a regular loop to do the actual looping.*/	
+				statement. It takes a value, a test function, an update function, and a body
+				function. Each iteration, it first runs the test function on the current loop value
+				and stops if that returns false. Then it calls the body function, giving it the
+				current value. Finally, it calls the update function to create a new value and
+				starts from the beginning.
+				When defining the function, you can use a regular loop to do the actual looping.*/	
 
 
 		// Author's Solution :
 
 			function loop(start, test, update, body) {
   				for (let value = start; test(value); value = update(value)) {
-    				body(value);
+    					body(value);
   				}
 			}
 
@@ -94,19 +94,16 @@
 	// Everything
 
 		/* PROBLEMATIC :Analogous to the some method, arrays also have an every method. This one
-						returns true when the given function returns true for every element in the array.
-						In a way, some is a version of the || operator that acts on arrays, and every is
-						like the && operator.
-						Implement every as a function that takes an array and a predicate function
-						as parameters. Write two versions, one using a loop and one using the some
-						method.
-									*/
+				returns true when the given function returns true for every element in the array.
+				In a way, some is a version of the || operator that acts on arrays, and every is like the && operator.
+				Implement every as a function that takes an array and a predicate function
+				as parameters. Write two versions, one using a loop and one using the some method. */
 
 		// Author's Solution :
 
 			function every(array, predicate) {
   				for (let element of array) {
-    				if (!predicate(element)) return false;
+    					if (!predicate(element)) return false;
   				}
   				return true;
 			}
@@ -128,8 +125,8 @@
 			function every(array, predicate) {
 				// The function every() takes an array and function which tests a boolean condition
   				for (let element of array) {
-  					// for each 'element' in 'array'
-    				if (!predicate(element)) return false;
+  				// for each 'element' in 'array'
+    					if (!predicate(element)) return false;
     					// the predicate function takes element as its argument and tests a certain condition
     					// on the given element, if the tests fails (if it returns not true) then return false 
   				}
@@ -139,8 +136,8 @@
 			//Practically does the same thing as every() but using an arrow function.
 			function every2(array, predicate) {
   				return !array.some(element => !predicate(element));
-  					// The some() method tests whether at least one element in the array passes the test implemented by the provided function.
-  					// It returns a Boolean value.
+  				// The some() method tests whether at least one element in the array passes the test implemented by the provided function.
+  				// It returns a Boolean value.
 			}
 
 	/*****************************************************************************************************/
@@ -148,11 +145,11 @@
 	// Dominant writing direction
 
 		/* PROBLEMATIC :Write a function that computes the dominant writing direction in a string of
-						text. Remember that each script object has a direction property that can be
-						"ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).
-						The dominant direction is the direction of a majority of the characters that
-						have a script associated with them. The characterScript and countBy func-
-						tions defined earlier in the chapter are probaly useful here */
+				text. Remember that each script object has a direction property that can be
+				"ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).
+				The dominant direction is the direction of a majority of the characters that
+				have a script associated with them. The characterScript and countBy func-
+				tions defined earlier in the chapter are probaly useful here */
 
 		// Author's Solution :
 
@@ -205,10 +202,10 @@
 
 		// Explanation of the above code :
 
-			// SCRIPTS :The example data set contains some pieces of information about the 140
-			//			scripts defined in Unicode. It is available in the coding sandbox for this chapter
-			//			(https://eloquentjavascript.net/code#5) as the SCRIPTS binding. The binding
-			//			contains an array of objects, each of which describes a script.
+			// SCRIPTS :	The example data set contains some pieces of information about the 140
+			//		scripts defined in Unicode. It is available in the coding sandbox for this chapter
+			//		(https://eloquentjavascript.net/code#5) as the SCRIPTS binding. The binding
+			//		contains an array of objects, each of which describes a script.
 
 			/*	Such an object tells us the name of the script, the Unicode ranges assigned to
 				it, the direction in which it is written, the (approximate) origin time, whether
@@ -234,8 +231,8 @@
 						// script.ranges.some : Here we call the some methode on ranges() 
 						// And what it does is that the some methode is going to loop through each sub-array of ranges function
 						// Ex : script.ranges.some(([994, 1008]) => 
-						// 		script.ranges.some(([11392, 11508]) =>
-						//		and so on ...
+						// 	script.ranges.some(([11392, 11508]) =>
+						//	and so on ...
 						//  For each sub-array the some methode will test the boolean condition (code >= from && code < to)					
 						return code >= from && code < to;
 					})) {
@@ -251,17 +248,17 @@
 			function characterScript(code) {
 				for (let script of SCRIPTS) {
 				// loops through each individual script inside the array/'database' SCRIPTS
-					// each script/language corresopnds to a particular numeric range,
-					// thats how a language is identified. 
+				// each script/language corresopnds to a particular numeric range,
+				// thats how a language is identified. 
 					if (script.ranges.some(([from, to]) => code >= from && code < to)){
-						// So inside each script there is key named range and the value is a two dimentional array
-						// with multiple ranges :[[994, 1008], [11392, 11508], [11513, 11520]].
-						// While looping through each indiviual script :
-							// the if condition checks whether our argument 'code'(which is a range corresponding to a unique language)
-							// corresponds to the current script. 
-							// if it is the case (meaning our code corressponds to a valid script in the DB SCRIPTS)
-								// the whole if condition becomes true and 'return script' is executed.
-								// i.e: if(True) 
+					// So inside each script there is key named range and the value is a two dimentional array
+					// with multiple ranges :[[994, 1008], [11392, 11508], [11513, 11520]].
+					// While looping through each indiviual script :
+						// the if condition checks whether our argument 'code'(which is a range corresponding to a unique language)
+						// corresponds to the current script. 
+						// if it is the case (meaning our code corresponds to a valid script in the DB SCRIPTS)
+							// the whole if condition becomes true and 'return script' is executed.
+							// i.e: if(True) 
 
 						return script;
 					}
@@ -310,9 +307,11 @@
 							// If it doesn't match or the array's length is 0 it returns -1. 
 							// If it matches it returns the index number of that object.
 					if (known == -1) {
-						counts.push({name, count: 1}); //adds new object to counts array with name equal to result of groupName function
+						counts.push({name, count: 1}); 
+						//adds new object to counts array with name equal to result of groupName function
 					} else {
-						counts[known].count++; //adds 1 to count property in object matching the index stored in 'known' which resulted from findIndex
+						counts[known].count++; 
+						//adds 1 to count property in object matching the index stored in 'known' which resulted from findIndex
 					}
 				}
 				return counts;
