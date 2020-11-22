@@ -253,6 +253,40 @@
 
   				[Symbol.iterator]() {
     					return new GroupIterator(this);
+				
+				// Iteration revolves around two concepts namely iterables and iterators.
+  				// Let's try to understand what are iterators and iterables.
+
+  					// -> An iterable is any object that implements a methode whose key is Symbol.iterator.
+
+  						/*	Iterable {
+								[Symbole.Iterator]() : Iterator
+  							}											
+
+  								The Symbol.Iterator methode is going to return an Iterator 		*/ 
+
+  					// -> An iterator is an object that is going to implement a next() methode
+
+  						/*	Iterator {
+								next() : IResultObj
+  							}
+
+  								This next() methode knows how to access elements in a collection be it an array or a string
+  								or maps or sets.
+
+  								The next methode returns an object(IResult) is nothing but an object that contains two properties...
+
+  							IResultObj{
+								value : any
+								done : bool
+  							}
+
+  								The first property is a value property and this can be of any data type.
+  								This value is going to be the actual value within the collection.
+
+  								The second property is a boolean flag called done, this done indicates if the ieration is complete or not.
+  								if done is true the iteration is complete else there are more elements to be iterated over.
+  						*/
   				}
 			}
 
