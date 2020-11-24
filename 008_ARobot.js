@@ -1,8 +1,8 @@
 // Project: A Robot
 
 	/*	Objectif : 	Our project in this chapter is to build an automaton, a little program that
-					performs a task in a virtual world. Our automaton will be a mail-delivery robot
-					picking up and dropping off parcels.		*/
+				performs a task in a virtual world. Our automaton will be a mail-delivery robot
+				picking up and dropping off parcels.		*/
 
 
 
@@ -17,9 +17,9 @@
 				"Alice's House-Post Office",	"Bob's House-Town Hall",
 				"Daria's House-Ernie's House",	"Daria's House-Town Hall",
 				"Ernie's House-Grete's House",	"Grete's House-Farm",
-				"Grete's House-Shop",			"Marketplace-Farm",
-				"Marketplace-Post Office",		"Marketplace-Shop",
-				"Marketplace-Town Hall",		"Shop-Town Hall"
+				"Grete's House-Shop",		"Marketplace-Farm",
+				"Marketplace-Post Office",	"Marketplace-Shop",
+				"Marketplace-Town Hall",	"Shop-Town Hall"
 			];		
 
 
@@ -47,7 +47,7 @@
 						// Object/dict graph take 'from' as object/key and assigns it to array/value to the string 'to' which 
 						// is an element in the array.
 					} else {
-						// else if 'from' is already inside the obj graph
+					// else if 'from' is already inside the obj graph
 						graph[from].push(to);
 						// the string argument 'to' gets pushed into existing array. 
 					}
@@ -73,29 +73,29 @@
 			/*	{
 					Alice's House:	["Bob's House", "Cabin", "Post Office"]
 					Bob's House:	["Alice's House", "Town Hall"]
-					Cabin:	["Alice's House"]
+					Cabin:		["Alice's House"]
 					Post Office:	["Alice's House", "Marketplace"]
 					Town Hall:	[
-									0:	"Bob's House"
-									1:	"Daria's House"
-									2:	"Marketplace"
-									3:	"Shop"
-								]
+								0:	"Bob's House"
+								1:	"Daria's House"
+								2:	"Marketplace"
+								3:	"Shop"
+							]
 					Daria's House:	["Ernie's House", "Town Hall"]
 					Ernie's House:	["Daria's House", "Grete's House"]
 					Grete's House:	["Ernie's House", "Farm", "Shop"]
-					Farm:	["Grete's House", "Marketplace"]
-					Shop:	[
+					Farm:		["Grete's House", "Marketplace"]
+					Shop:		[
 								0:	"Grete's House"
 								1:	"Marketplace"
 								2:	"Town Hall"
 							]
 					Marketplace:	[
-										0:	"Farm"
-										1:	"Post Office"
-										2:	"Shop"
-										3:	"Town Hall"
-									]
+								0:	"Farm"
+								1:	"Post Office"
+								2:	"Shop"
+								3:	"Town Hall"
+							]
 				}
 			*/
 
